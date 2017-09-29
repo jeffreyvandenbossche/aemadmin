@@ -1,4 +1,4 @@
-package com.pieterjd.aemadmin.command.packmgr;
+package com.pieterjd.aemadmin.packmgr;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.client.methods.HttpUriRequest;

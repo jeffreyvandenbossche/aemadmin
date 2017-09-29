@@ -1,4 +1,4 @@
-package com.pieterjd.aemadmin.command.packmgr;
+package com.pieterjd.aemadmin.packmgr;
 
 import com.pieterjd.aemadmin.command.HttpRequestCommand;
 

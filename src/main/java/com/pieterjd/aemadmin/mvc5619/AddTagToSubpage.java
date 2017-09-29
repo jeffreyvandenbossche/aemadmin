@@ -3,6 +3,7 @@ package com.pieterjd.aemadmin.mvc5619;
 import com.github.tsohr.JSONArray;
 import com.github.tsohr.JSONObject;
 import com.pieterjd.aemadmin.command.PostProcessCommand;
+import com.pieterjd.aemadmin.command.crx.property.DeletePropertyCommand;
 import com.pieterjd.aemadmin.command.crx.property.SetPropertyCommand;
 
 import com.pieterjd.aemadmin.mvc5619.tags.UrlToTagMapperFactory;
@@ -13,10 +14,11 @@ import com.pieterjd.aemadmin.mvc5619.tags.UrlToTagMapperFactory;
 public class AddTagToSubpage extends PostProcessCommand<QuerySubpage> {
 
     private String tagid;
+    private String language;
 
     public AddTagToSubpage(QuerySubpage command, String language,String tagid) {
         super(command);
-
+        this.language = language;
         this.tagid = tagid;
     }
 
@@ -30,9 +32,11 @@ public class AddTagToSubpage extends PostProcessCommand<QuerySubpage> {
         for (int i = 0; i < hits.length(); i++) {
             String nodePath = hits.getJSONObject(i).getString("path");
             System.out.println(nodePath);
-
-
-                SetPropertyCommand spc = new SetPropertyCommand(nodePath + "/jcr:content", "cq:tags", tagid);
+            if(language.equals("en")) {
+                DeletePropertyCommand dpc = new DeletePropertyCommand(nodePath + "/jcr:content", "cq:tags", "dummyvalue");
+                dpc.execute();
+            }
+            SetPropertyCommand spc = new SetPropertyCommand(nodePath + "/jcr:content", "cq:tags", tagid);
 
                 spc.execute();
 

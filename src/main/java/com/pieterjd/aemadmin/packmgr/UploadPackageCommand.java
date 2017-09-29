@@ -1,4 +1,4 @@
-package com.pieterjd.aemadmin.command.packmgr;
+package com.pieterjd.aemadmin.packmgr;
 
 import com.github.tsohr.JSONObject;
 import com.github.tsohr.XML;

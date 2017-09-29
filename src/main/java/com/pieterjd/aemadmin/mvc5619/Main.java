@@ -5,7 +5,7 @@ package com.pieterjd.aemadmin.mvc5619;
  */
 public class Main {
     public static void main(String[] args){
-        String[] languages = {"fr","nl"};
+        String[] languages = {"fr","nl","en"};
         for(String language:languages) {
 
             /*Monthly plans*/
