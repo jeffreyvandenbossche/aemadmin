@@ -20,4 +20,13 @@ public class QuerySubpage extends QueryCommand{
         addCondition("type","cq:Page");
         addCondition("p.limit","-1");
     }
+
+    public QuerySubpage(String path, String resourceType){
+        this.path = path;
+
+        addCondition("1_property","sling:resourceType");
+        addCondition("1_property.value", resourceType);
+        addCondition("path",path);
+        addCondition("p.limit","-1");
+    }
 }

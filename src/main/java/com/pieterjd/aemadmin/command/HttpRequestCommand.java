@@ -36,12 +36,10 @@ public abstract class HttpRequestCommand extends AbstractCommand {
         try (InputStream inputStream = ClassLoader.getSystemResourceAsStream("localhost.properties")){
             result.load(inputStream);
         } catch (IOException e) {
-            /*
             result.put("baseUrl","http://localhost");
             result.put("port","4502");
             result.put("userName","admin");
             result.put("password","admin");
-            */
         }
         return result;
     }
