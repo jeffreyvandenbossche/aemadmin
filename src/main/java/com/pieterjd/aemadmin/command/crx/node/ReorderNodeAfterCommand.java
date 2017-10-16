@@ -43,10 +43,10 @@ public class ReorderNodeAfterCommand extends CrxCommand{
     public HttpUriRequest getRequest() throws URISyntaxException {
         HttpUriRequest result = null;
         List<NameValuePair> params = new ArrayList<>();
-        params.add(new BasicNameValuePair("order","after "+getPutAfterNode()));
+        params.add(new BasicNameValuePair(":order","after "+getPutAfterNode()));
 
         try {
-            result = getAuthenticatedGetRequestBuilder(getPath())
+            result = getAuthenticatedPostRequestBuilder(getPath())
                     .setEntity(new UrlEncodedFormEntity(params))
                     .build();
         } catch (UnsupportedEncodingException e) {
