@@ -4,7 +4,7 @@ import com.github.tsohr.JSONArray;
 import com.github.tsohr.JSONObject;
 import com.pieterjd.aemadmin.command.PostProcessCommand;
 import com.pieterjd.aemadmin.command.crx.node.CreateNodeCommand;
-import com.pieterjd.aemadmin.command.crx.property.DeletePropertyCommand;
+import com.pieterjd.aemadmin.command.crx.node.ReorderNodeAfterCommand;
 import com.pieterjd.aemadmin.command.crx.property.SetPropertyCommand;
 import com.pieterjd.aemadmin.mivc647.components.IComponent;
 import com.pieterjd.aemadmin.mvc5619.QuerySubpage;
@@ -49,6 +49,8 @@ public class AddComponentToSubpage<T extends IComponent> extends PostProcessComm
             create.execute();
             SetPropertyCommand addProperty = new SetPropertyCommand(nodePath, "sling:resourceType", this.component.getResourceType());
             addProperty.execute();
+            ReorderNodeAfterCommand after = new ReorderNodeAfterCommand(nodePath, "title");
+            after.execute();
             System.out.println("\t\t[-] Created in " + nodePath + " Resource Type= " + this.component.getResourceType());
         }
         // CreateNodeCommand createNodeCommand = new CreateNodeCommand()
