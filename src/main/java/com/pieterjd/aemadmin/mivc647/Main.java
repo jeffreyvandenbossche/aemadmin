@@ -18,6 +18,14 @@ public class Main {
             AddComponentToSubpage add = new AddComponentToSubpage(query, tags);
             add.execute();
         }
+        /*
+        for (String lang : languages) {
+            QuerySubpage query = new QuerySubpage(
+                    "/content/kpngb-base/" + lang + "/frequently-asked-questions",
+                    "kpngb-whitelabel/components/page/responsive-faq-page");
+            DeleteComponentFromSubpage delete = new DeleteComponentFromSubpage(query, tags);
+            delete.execute();
+        }*/
 
     }
 
