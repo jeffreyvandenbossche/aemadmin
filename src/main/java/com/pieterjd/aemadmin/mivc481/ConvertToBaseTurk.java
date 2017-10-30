@@ -19,6 +19,8 @@ public class ConvertToBaseTurk extends PostProcessCommand<QuerySubpage> {
         put("kpngb-whitelabel/components/page/responsive-eservices-page", "kpngb-whitelabel/components/page/responsive-baseturk-eservices-page");
         put("kpngb-whitelabel/components/page/responsive-landingpage", "kpngb-whitelabel/components/page/responsive-baseturk-landingpage");
         put("/apps/kpngb-whitelabel/templates/responsive-landingpage", "/apps/kpngb-whitelabel/templates/responsive-baseturk-landingpage");
+        put("kpngb-whitelabel/components/page/responsive-loginpage", "kpngb-whitelabel/components/page/responsive-baseturk-loginpage");
+        put("/apps/kpngb-whitelabel/templates/responsive-loginpage", "/apps/kpngb-whitelabel/templates/responsive-baseturk-loginpage");
         put("/apps/kpngb-whitelabel/templates/responsive-homepage", "/apps/kpngb-whitelabel/templates/responsive-baseturk-homepage");
         put("kpngb-whitelabel/components/page/responsive-homepage", "kpngb-whitelabel/components/page/responsive-baseturk-homepage");
         put("/apps/kpngb-whitelabel/templates/responsive-page", "/apps/kpngb-whitelabel/templates/responsive-baseturk-page");
