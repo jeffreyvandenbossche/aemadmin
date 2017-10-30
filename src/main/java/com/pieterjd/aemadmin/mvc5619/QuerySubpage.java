@@ -21,6 +21,20 @@ public class QuerySubpage extends QueryCommand{
         addCondition("p.limit","-1");
     }
 
+    public QuerySubpage(String path, boolean recursive) {
+        this.path = path;
+        if (recursive) {
+            addCondition("path",path);
+            addCondition("type","cq:Page");
+            addCondition("p.limit","-1");
+        } else {
+            addCondition("path",path);
+            addCondition("path.flat","true");
+            addCondition("type","cq:Page");
+            addCondition("p.limit","-1");
+        }
+    }
+
     public QuerySubpage(String path, String resourceType){
         this.path = path;
 
