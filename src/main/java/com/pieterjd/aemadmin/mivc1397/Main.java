@@ -35,7 +35,7 @@ public class Main {
             if (buttonNode.isSuccess() && "kpngb/content/components/button".equals(buttonNode.getHttpResponseAsJSON().getString("sling:resourceType"))) {
                 System.out.println("\t[-] Button node found under the compare card. resourceType is changing..");
                 SetPropertyCommand addProperty = new SetPropertyCommand(compareCardButtonPath,
-                        "sling:resourceType", "kpngb/content/components/cta");
+                        "sling:resourceType", "kpngb/content/components/orion/cta");
                 addProperty.execute();
                 System.out.println("\t\t[-] resourceType is changed");
                 GetPropertyCommand getLinkProperty = new GetPropertyCommand(compareCardButtonPath, "link");
