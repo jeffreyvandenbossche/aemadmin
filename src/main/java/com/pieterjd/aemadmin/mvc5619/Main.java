@@ -73,10 +73,10 @@ public class Main {
             atts = new AddTagToSubpage(new QuerySubpage("/content/kpngb-base/"+language+"/frequently-asked-questions/invoices-payments/direct-debit"), language,"faq:invoices-and-payments/direct-debit");
             atts.execute();
 
-            atts = new AddTagToSubpage(new QuerySubpage("/content/kpngb-base/"+language+"/frequently-asked-questions/invoices-payments/consult-your-invoice"), language,"faq:invoice-and-payments/consult-your-invoice");
+            atts = new AddTagToSubpage(new QuerySubpage("/content/kpngb-base/"+language+"/frequently-asked-questions/invoices-payments/consult-your-invoice"), language,"faq:invoices-and-payments/consult-your-invoice");
             atts.execute();
 
-            atts = new AddTagToSubpage(new QuerySubpage("/content/kpngb-base/"+language+"/frequently-asked-questions/invoices-payments/how-to-pay"), language,"faq:invoice-and-payments/how-to-pay");
+            atts = new AddTagToSubpage(new QuerySubpage("/content/kpngb-base/"+language+"/frequently-asked-questions/invoices-payments/how-to-pay"), language,"faq:invoices-and-payments/how-to-pay");
             atts.execute();
 
 
@@ -168,7 +168,6 @@ public class Main {
 
             atts = new AddTagToSubpage(new QuerySubpage("/content/kpngb-base/"+language+"/frequently-asked-questions/manage-your-account/access-costumer-zone"), language,"faq:manage-your-account/access-costumer-zone");
             atts.execute();
-
 
 
            
